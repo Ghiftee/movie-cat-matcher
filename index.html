@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1> MOVIE NIGHT WITH YOUR CAT</h1>
-    <h3> Select a mood to get a movie + cat recommendation</h3>
-    <div>
+    <h3> Select a mood to get a mood-based movie recommendation + a random fact about cats!</h3>
+    <div class="all-buttons">
         <button>Happy</button>
         <button>Sad</button>
         <button>Angry</button>
@@ -17,9 +17,40 @@
         <button>Romantic</button>
     </div>
 
+    <div class="deets-card">
+        <div class="movie-info">
+            <div class="movie-img"></div>
+            <div class="about-movie">
+                <div class="movie-name"></div>
+                <div class="movie-overview"></div>
+                <div class="movie-genre"></div>
+            </div>
+        </div>
+        
+        <p class ="cat-fact"></p>
+        
+    </div>
+
 
     <script>
+        const buttonAction = document.querySelectorAll('.all-buttons');
+        const catFact = document.querySelector('.cat-fact');
+
         
+
+
+        buttonAction.forEach(btn =>{
+            btn.addEventListener('click', () => {
+            fetch('https://catfact.ninja/fact')
+                // .then(response => console.log(result))
+                .then(response => response.json())
+                .then(data => {
+                    const catFactValue = data.fact;
+                    catFact.innerText = catFactValue;
+                })
+                .catch(error => console.log('error'))
+        })
+        })
     </script>
 </body>
 </html>
