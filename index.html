@@ -8,26 +8,25 @@
 </head>
 <body>
     <h1> MOVIE NIGHT WITH YOUR CAT</h1>
-    <h3> Select a mood to get a mood-based movie recommendation + a random fact about cats!</h3>
+    <p class="desc"> Select a mood to get a mood-based movie recommendation + a random fact about cats!</p>
     <div class="all-buttons">
-        <button>Happy</button>
-        <button>Sad</button>
-        <button>Angry</button>
-        <button>Bored</button>
-        <button>Romantic</button>
+        <button> &#128513; Happy </button>
+        <button> &#128546; Sad</button>
+        <button> &#128544; Angry</button>
+        <button> &#128530; Bored</button>
+        <button> &#128525; Romantic</button>
     </div>
 
     <div class="deets-card">
+        <p class ="cat-fact"></p>
         <div class="movie-info">
-            <div class="movie-img"></div>
+            <img class="movie-img">
             <div class="about-movie">
-                <div class="movie-name"></div>
-                <div class="movie-overview"></div>
-                <div class="movie-genre"></div>
+                <h2 class="title"></h2>
+                <p class="overview"></p>
+                <p class="genre"></p>
             </div>
         </div>
-        
-        <p class ="cat-fact"></p>
         
     </div>
 
@@ -36,20 +35,25 @@
         const buttonAction = document.querySelectorAll('.all-buttons');
         const catFact = document.querySelector('.cat-fact');
 
-        
+        //const apiKey = '1c72abf78ccfef36d42761afe666b7e7';
+        //const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
+   
 
 
-        buttonAction.forEach(btn =>{
+        buttonAction.forEach(btn => {
             btn.addEventListener('click', () => {
+
+
             fetch('https://catfact.ninja/fact')
-                // .then(response => console.log(result))
                 .then(response => response.json())
                 .then(data => {
                     const catFactValue = data.fact;
                     catFact.innerText = catFactValue;
                 })
-                .catch(error => console.log('error'))
+                .catch(error => console.log('error'));
+            
         })
+
         })
     </script>
 </body>

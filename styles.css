@@ -1,5 +1,42 @@
 body{
     text-align: center;
-    background-color: rgb(195, 62, 195);
-    
+    background: #0f172a;
+    color: white;
+    padding: 10%;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 {
+    font-size: 50px;
+    color: antiquewhite;
+}
+
+.desc {
+    font-size: 20px;
+    font-style: italic;
+}
+
+button{
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #6366f1;
+    color: white;
+}
+
+button:hover{
+    background: #4f46e5;
+}
+
+.cat-fact{
+    color: antiquewhite;
+    padding: 5%;
+    border: 5px solid white;
+    border-radius: 8%;
+    background: rgb(107, 104, 104);
+    font-size: 20px;
+}
+    
