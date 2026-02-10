@@ -1,42 +1,60 @@
 body{
-    text-align: center;
-    background: #0f172a;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     color: white;
     padding: 10%;
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
+
+
 
 h1 {
-    font-size: 50px;
-    color: antiquewhite;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #e94560, #ff85a1);
+    background-clip: text;
+    color: transparent;
 }
 
-.desc {
-    font-size: 20px;
+p.desc {
     font-style: italic;
+    color: #95a5a6;
+    margin-bottom: 2rem;
 }
+
 
 button{
-    padding: 10px 15px;
-    margin: 10px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 16px;
-    background: #6366f1;
-    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 button:hover{
-    background: #4f46e5;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.deets-card{
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    position: relative;
 }
 
 .cat-fact{
-    color: antiquewhite;
-    padding: 5%;
-    border: 5px solid white;
-    border-radius: 8%;
-    background: rgb(107, 104, 104);
-    font-size: 20px;
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 15px;
 }
     

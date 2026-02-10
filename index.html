@@ -7,14 +7,19 @@
      <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1> MOVIE NIGHT WITH YOUR CAT</h1>
-    <p class="desc"> Select a mood to get a mood-based movie recommendation + a random fact about cats!</p>
-    <div class="all-buttons">
-        <button> &#128513; Happy </button>
-        <button> &#128546; Sad</button>
-        <button> &#128544; Angry</button>
-        <button> &#128530; Bored</button>
-        <button> &#128525; Romantic</button>
+    <div class="container">
+        <header>
+            <h1> MOVIE NIGHT WITH YOUR CAT</h1>
+            <p class="desc"> Select a mood to get a mood-based movie recommendation + a random fact about cats!</p>
+        </header>
+    
+        <div class="all-buttons">
+            <button> &#128513; Happy </button>
+            <button> &#128546; Sad</button>
+            <button> &#128544; Angry</button>
+            <button> &#128530; Bored</button>
+            <button> &#128525; Romantic</button>
+        </div>
     </div>
 
     <div class="deets-card">
@@ -35,8 +40,8 @@
         const buttonAction = document.querySelectorAll('.all-buttons');
         const catFact = document.querySelector('.cat-fact');
 
-        //const apiKey = '1c72abf78ccfef36d42761afe666b7e7';
-        //const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
+        const apiKey = '1c72abf78ccfef36d42761afe666b7e7';
+        const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
    
 
 
